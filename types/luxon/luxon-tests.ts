@@ -46,7 +46,8 @@ const ianaZoneTest = DateTime.fromObject({
 
 FixedOffsetZone.utcInstance.equals(FixedOffsetZone.instance(0));
 
-FixedOffsetZone.instance(60);
+const fixedZone = FixedOffsetZone.instance(60);
+fixedZone.offsetName(); // $ExpectType string
 FixedOffsetZone.parseSpecifier('UTC+6');
 
 const fromIso = DateTime.fromISO('2017-05-15'); // => May 15, 2017 at midnight
