@@ -557,6 +557,7 @@ export class FixedOffsetZone extends Zone {
     static utcInstance: FixedOffsetZone;
     static instance(offset: number): FixedOffsetZone;
     static parseSpecifier(s: string): FixedOffsetZone;
+    offsetName(): string;
 }
 
 export class InvalidZone extends Zone { }
